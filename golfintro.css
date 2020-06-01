@@ -1,0 +1,272 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+  }
+  body{
+    background-image: url('images/play.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .wrap{
+    width: 100%;
+    height: 60px;
+    margin: 0;
+  }
+  nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:  #0d0d0d;
+    font-family:'Poppins', sans-serif;
+
+  }
+  .logo{
+    color: #eeeeee;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
+.nav-links {
+  display:flex;
+  justify-content: space-around;
+  width: 40%;
+
+}
+.nav-links li{
+  list-style:none;
+}
+.nav-links a{
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight:bold;
+  font-size: 16px;
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 2s ease;
+}
+/* tablets zone */
+@media screen and (max-width: 1024px){
+  .nav-links {
+    width: 60%;
+
+  }
+
+}
+/* mobile zone */
+@media screen and (max-width: 760px){
+  body{
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position:absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color:  #0d0d0d;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opactiy: 0;
+  }
+  .burger{
+    display:block;
+  }
+
+}
+.nav-active{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px));
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px));
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b5e3f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b7a9c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #006888;
+}
+
+/* Responsive Screen */
+@media only screen and (max-width: 800px) {
+
+    .title {
+        font-size: 2em;
+    }
+
+    .test-area {
+        width: 80vw;
+    }
+}
+
+/* BACKGROUND*/
+
+.container {
+    height: 100vh;
+    max-width: 2000px;
+    margin:auto;
+    background-image: url('images/play.jpg');
+    background-size: cover;
+    background-position: center;
+     background-position-y: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: -1;
+}
+/* .row{
+  display:flex;
+  flex-wrap: wrap;
+} */
+
+.title {
+    margin-top: 10vh;
+    font-size: 3em;
+    padding: 10px;
+    color: 	#ffffff;
+    font-family: 'Piedra', cursive;
+    text-align: center;
+}
+
+.test-area {
+   width: 70vw;
+   height: 90vh;
+   box-sizing: border-box;
+   padding: 2em;
+   background-color: #000000;
+   margin: auto;
+   text-align: left;
+   color: rgb(2, 40, 90);
+   overflow: auto;
+}
+.grid-image{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr; */
+  grid-auto-columns: minmax(100px, auto);
+  grid-template-areas:
+  "image1 image2 image3"
+  "image4 image5 image6";
+}
+h2{
+  font-family: 'Chelsea Market', cursive;
+  color: #f0b3ff;
+  font-size: 30px;
+}
+h4{
+  font-family: 'Chelsea Market', cursive;
+  color: #f0b3ff;
+  font-size: 15px;
+
+}
+p{
+  font-size: 23px;
+  color: #ffffff;
+  font-family: 'Caveat', cursive;
+}
+li{
+  /*font-family: 'Nunito Sans', sans-serif;*/
+  font-size: 23px;
+  color: #ffffff;
+  font-family: 'Caveat', cursive;
+}
+i{
+  font-size: 23px;
+  color: #ffffff;
+  font-family: 'Caveat', cursive;
+}
+u{
+  font-size: 23px;
+  color: #ffffff;
+  font-family: 'Caveat', cursive;
+}
+
+.topnav {
+  background-color: none;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 25px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #e6e6ff;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+img{
+  display: block;
+  margin: auto;
+  width: 230px;
+  height: 200px;
+
+
+}
